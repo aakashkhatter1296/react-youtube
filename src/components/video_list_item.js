@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function VideoListItem(props) {
-	const thumbnailUrl = props.video.snippet.thumbnails.default.url;
+export default function VideoListItem({video}) {
+	const thumbnailUrl = video.snippet.thumbnails.default.url;
 	return (
 		<li className="list-group-item">
 			<div className="video-list media">
@@ -10,7 +10,7 @@ export default function VideoListItem(props) {
 				</div>
 				<div className="media-body">
 					<div className="media-heading">
-						{props.video.snippet.title}
+						{video.snippet.title}
 					</div>
 				</div>
 			</div>
