@@ -15,7 +15,7 @@ export default function VideoDetail({video}) {
 				<iframe src={url} className="embed-responsive-item"></iframe>
 			</div>
 			<div className="details">
-				<div>{ video.snippet.title }</div>
+				<div><h3>{ video.snippet.title }</h3></div>
 				<div>{ video.snippet.description }</div>
 			</div>
 		</div>
