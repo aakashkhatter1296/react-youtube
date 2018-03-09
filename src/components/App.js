@@ -3,9 +3,8 @@ import SearchBar from "./search_bar";
 import YTSearch from "youtube-api-search";
 import VideoList from "./video_list";
 import VideoDetail from "./video_detail";
+import { API_KEY } from "../config.js";
 import _ from "lodash";
-
-const API_KEY = "AIzaSyA33ekq2jSbMF7fRSyzBKIpKMohPS2oYfM";
 
 class App extends Component {
 	constructor(props) {
