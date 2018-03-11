@@ -3,8 +3,9 @@ import SearchBar from "./search_bar";
 import YTSearch from "youtube-api-search";
 import VideoList from "./video_list";
 import VideoDetail from "./video_detail";
-import { API_KEY } from "../config.js";
 import _ from "lodash";
+
+const API_KEY = "";
 
 class App extends Component {
 	constructor(props) {
@@ -12,11 +13,10 @@ class App extends Component {
 
 		this.state = {
 			videos: [],
-			selectedVideo: null,
-			term: "surf"
+			selectedVideo: null
 		};
 
-		this.videoSearch(this.state.term);
+		this.videoSearch('surfboards');
 	}
 
 	videoSearch(term) {
@@ -31,7 +31,7 @@ class App extends Component {
 	render() {
 		const videoSearch = _.debounce(term => {
 			this.videoSearch(term);
-		}, 500);
+		}, 300);
 
 		return (
 			<div className="App">
